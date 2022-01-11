@@ -1,0 +1,8 @@
+.useR{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px cornflowerblue solid;
+    margin: 4px;
+}
