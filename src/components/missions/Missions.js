@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+
 import Missison from "../Mission/Missison";
 
 const Missions = () => {
@@ -15,7 +16,7 @@ const Missions = () => {
         <div>
             {
                 missions.map(mission => <Missison key={mission.flight_number} name={mission.mission_name}
-                                                  year={mission.launch_year} img={mission.mission_patch_small}/>)
+                                                  year={mission.launch_year} img={mission.links.mission_patch_small}/>)
             }
         </div>
     );

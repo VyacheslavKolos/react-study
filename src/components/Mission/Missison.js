@@ -1,9 +1,10 @@
 import React from 'react';
 
-
+import Missiom from "./Mission.css";
 
 const Missison = (props) => {
     const {name, year, img} = props;
+    console.log(img);
     return (
         <div className={"wrap"}>
             <div className={"text"}>
