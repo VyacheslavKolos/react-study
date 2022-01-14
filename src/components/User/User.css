@@ -1,0 +1,14 @@
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+justify-content: space-between;
+}
+button{
+    margin-left: 10px;
+    height: 40px;
+    width: 70px;
+}
+p{
+    font-size: 15px;
+}

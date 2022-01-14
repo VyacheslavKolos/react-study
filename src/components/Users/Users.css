@@ -1,0 +1,37 @@
+.usersWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.users {
+    width: 50%;
+    border: 2px solid red;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.oneUser {
+    width: 50%;
+    margin-left: 6px;
+    border: 2px solid red;
+}
+
+.oneUserWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+p {
+    width: 80%;
+}
+
+body {
+    margin: 2px;
+}
+
+.userDetails {
+    width: 60%;
+}
