@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const Post = (props) => {
-const {userId,id,title,body}=props;
+    const {userId, id, title, body} = props;
 
     return (
         <div>

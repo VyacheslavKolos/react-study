@@ -1,7 +1,8 @@
 import React from 'react';
 
 import "./UserDetails.css"
-const UserDetails = ({user,getUserId}) => {
+
+const UserDetails = ({user, getUserId}) => {
     return (
         <div className={"userDetailsWrap"}>
             <div className={"oneUser"}>
@@ -23,7 +24,7 @@ const UserDetails = ({user,getUserId}) => {
                         <p>bs: {user.company.bs}</p>
 
                     </div>
-                    <button onClick={()=>getUserId(user.id)}>get posts</button>
+                    <button onClick={() => getUserId(user.id)}>get posts</button>
 
                 </div>
             </div>

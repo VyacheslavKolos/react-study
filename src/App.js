@@ -1,8 +1,8 @@
 import './App.css';
+
 import Users from "./components/Users/Users";
 import Posts from "./components/Posts/Posts";
 import React, {useState} from "react";
-import {userService} from "./services/user.service";
 import UserDetails from "./components/UserDetails/UserDetails";
 
 

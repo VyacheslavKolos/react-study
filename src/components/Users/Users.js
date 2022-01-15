@@ -3,8 +3,6 @@ import React, {useEffect, useState} from 'react';
 import {userService} from "../../services/user.service";
 import User from "../User/User";
 import "./Users.css"
-import Post from "../Post/Post";
-import Posts from "../Posts/Posts";
 
 const Users = ({getUser}) => {
 
