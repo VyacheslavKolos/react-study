@@ -2,20 +2,21 @@ import React, {useEffect, useState} from 'react';
 import {userService} from "../../services/user.service";
 import Post from "../Post/Post";
 import Users from "../Users/Users";
+import {postService} from "../../services/post.service";
 
-const Posts = ({id}) => {
+import "./Posts.css"
+
+const Posts = ({userId}) => {
     const [posts, setPosts] = useState([]);
-    // const getUserPosts = (id) => {
-    //     userService.getPostsById(id).then(value =>setPosts(value))
-    // }
-    useEffect(()=>{userService.getPostsById(id).then(value =>setPosts(value))},[])
-    console.log(posts);
-    console.log(id)
-    return (
-        <div>
 
+    useEffect(() => {
+       postService.getByUserId(userId).then(value => setPosts(value))
+    }, [userId])
+    return (
+        <div className={"Posts"}>
+            <h1>Posts:</h1>
             {
-                posts.map(value => <Post key={value.id} {...value} getUserPosts={getUserPosts}/>)
+                posts.map(value => <Post key={value.id} {...value} />)
             }
         </div>
     );

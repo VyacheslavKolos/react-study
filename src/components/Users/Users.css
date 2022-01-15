@@ -1,29 +1,25 @@
 .usersWrap {
     display: flex;
     flex-direction: row;
+    width: 50%;
 }
 
 .users {
-    width: 50%;
     border: 2px solid red;
     padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-.oneUser {
-    width: 50%;
-    margin-left: 6px;
-    border: 2px solid red;
-}
-
-.oneUserWrap {
+.user{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
-
+h1{
+    margin-left: 15px;
+}
 p {
     width: 80%;
 }
@@ -32,6 +28,3 @@ body {
     margin: 2px;
 }
 
-.userDetails {
-    width: 60%;
-}

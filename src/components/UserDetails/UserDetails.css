@@ -1,0 +1,20 @@
+.userDetailsWrap{
+border: 2px solid red;
+    margin-left: 10px;
+    width: 50%;
+}
+.oneUserWrap{
+    display: flex;
+    align-items: center;
+}
+.oneUserWrap> button{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+.userDetails{
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+}
