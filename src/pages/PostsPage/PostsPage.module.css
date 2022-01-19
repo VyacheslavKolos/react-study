@@ -1,0 +1,11 @@
+.postsWrap{
+    display: flex;
+    flex-direction: row;
+}
+.posts{
+    border: #03ff00 2px solid;
+    width: 40%;
+}
+.outlet{
+    width: 60%;
+}

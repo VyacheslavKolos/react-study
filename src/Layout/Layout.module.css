@@ -1,0 +1,29 @@
+.header{
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    gap: 30px;
+    font-size: 25px;
+}
+.header a{
+    text-decoration: none;
+    color: #03ff00;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.header a[class='active']{
+text-decoration: underline;
+    color: white;
+}
+.outlet{
+    width: 98%;
+    padding: 3px;
+    margin: 0 auto;
+    overflow: hidden;
+    overflow-y: auto;
+    height: calc( 100vh - 90px);
+}

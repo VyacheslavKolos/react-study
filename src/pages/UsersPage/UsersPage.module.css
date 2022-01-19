@@ -1,0 +1,11 @@
+.usersWrap{
+    display: flex;
+    flex-direction: row;
+}
+.users{
+    border: #03ff00 2px solid;
+    width: 40%;
+}
+.outlet{
+    width: 60%;
+}
