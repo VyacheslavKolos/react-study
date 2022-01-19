@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import {Outlet} from "react-router-dom";
+
 import {postsService} from "../../services/posts.service";
 import Post from "../../components/Post/Post";
 import css from './PostsPage.module.css'
-import {Outlet} from "react-router-dom";
 
 const PostsPage = () => {
     const [posts, setPosts] = useState([]);
@@ -21,7 +22,6 @@ const PostsPage = () => {
             <div className={css.outlet}>
                 <Outlet/>
             </div>
-
         </div>
     );
 };

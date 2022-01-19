@@ -1,6 +1,7 @@
 import React from 'react';
-import css from "./Layout.module.css";
 import {NavLink, Outlet} from "react-router-dom";
+
+import css from "./Layout.module.css";
 import Header from "../components/Header/Header";
 
 const Layout = () => {

@@ -1,4 +1,13 @@
 .post{
     border: #2571ff 2px solid;
     margin-left: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.post button{
+    width: 100px;
+    height: 40px;
+    margin-bottom: 10px;
 }
