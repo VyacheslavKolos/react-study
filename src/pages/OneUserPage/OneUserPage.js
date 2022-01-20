@@ -44,4 +44,4 @@ const OneUserPage = () => {
     );
 };
 
-export default OneUserPage;
+export {OneUserPage};

@@ -1,0 +1,13 @@
+.album{
+border: 2px solid firebrick;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.album button{
+    margin-bottom: 5px;
+    width: 90px;
+    height: 36px;
+}

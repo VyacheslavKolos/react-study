@@ -22,4 +22,4 @@ const PostComments = () => {
     );
 };
 
-export default PostComments;
+export {PostComments};

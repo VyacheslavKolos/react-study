@@ -8,9 +8,15 @@ const User = ({user}) => {
     return (
         <div className={css.user}>
             <p>{id}) {name} -- {username} -- {email}</p>
+
             <Link to={id.toString()}>
                 <button>User Details</button>
             </Link>
+
+            <Link to={`${id.toString()}/albums`}>
+                <button>Albums</button>
+            </Link>
+
         </div>
     );
 };
