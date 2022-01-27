@@ -58,7 +58,12 @@ const Counters = () => {
                 <button onClick={() => dispatch({type: 'null3'})}>0</button>
             </div>
         </div>
+
+
+
     );
 };
 
 export default Counters;
+
+
