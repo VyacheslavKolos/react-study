@@ -5,18 +5,19 @@ import Cat from "../Cat/Cat";
 import Dog from "../Dog/Dog";
 
 const Forms = () => {
-    const {register, handleSubmit,reset} = useForm();
-
-    const [dog, setDog] = useState({});
+    const {register, handleSubmit, reset} = useForm();
 
     const reducer = (state, action) => {
+
         switch (action.type) {
             case 'addDog':
                 return {...state, dogs: [...state.dogs, action.name]};
             case 'addCat':
                 return {...state, cats: [...state.cats, action.name]};
             case 'deleteCat':
-                return {...state, cats: []}
+                return {...state, cats: state.cats.filter(value => value.cat !== action.animalName)}
+            case 'deleteDog':
+                return {...state, dogs: state.dogs.filter(value => value.dog !== action.animalName)}
 
             default:
                 throw new Error();
@@ -34,7 +35,7 @@ const Forms = () => {
         dispatch({type: "addDog", name: data})
         reset();
     }
-    console.log(state.dogs);
+    // console.log(state.cats);
 
     return (
         <div className={css.form}>
@@ -48,10 +49,7 @@ const Forms = () => {
                     state.cats &&
                     state.cats.map(
                         cat =>
-                            <Cat key={Math.random()*10000000} cat={cat} />
-                        //     <div>
-                        //     {cat.cat}
-                        // </div>
+                            <Cat key={Math.random() * 10000000} cat={cat} dispatch={dispatch}/>
                     )}
             </div>
 
@@ -64,7 +62,7 @@ const Forms = () => {
                     state.dogs &&
                     state.dogs.map(
                         dog =>
-                            <Dog key={Math.random()*10000000} dog={dog}/>
+                            <Dog key={Math.random() * 10000000} dog={dog} dispatch={dispatch}/>
                     )}
             </div>
 

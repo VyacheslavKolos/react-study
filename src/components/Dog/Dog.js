@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 
-const Dog = ({dog}) => {
-
+const Dog = ({dog, dispatch}) => {
+    const deleteDog = () => {
+        dispatch({type: "deleteDog", animalName: dog.dog})
+    }
 
     return (
         <div>
             {dog.dog}
-            <button>Delete</button>
+            <button onClick={deleteDog}>Delete</button>
         </div>
     );
 };
