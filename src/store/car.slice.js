@@ -61,7 +61,6 @@ const carSlice = createSlice({
         },
         carToUpdate: (state, action) => {
             state.carForUpdate = action.payload.car
-            console.log(state.carForUpdate);
         },
         updateCar: (state, action) => {
             const index = state.cars.findIndex(car => car.id === action.payload.car.id)

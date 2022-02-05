@@ -10,13 +10,14 @@ const Car = ({car}) => {
     const {model, price, year, id} = car;
     const dispatch = useDispatch();
 
-    const [updatedCar, setUpdatedCar] = useState(false);
+    const [updatedCar, setUpdatedCar] = useState(0);
 
     const carToUpd = () => {
         setUpdatedCar(car)
         dispatch(carToUpdate({car}))
     }
 
+    const {carForUpdate} = useSelector(store => store.cars)
 
     return (
         <div className={"car"}>
@@ -28,8 +29,7 @@ const Car = ({car}) => {
                 <button onClick={() => carToUpd()}>updateCar</button>
                 <hr/>
             </div>
-            {updatedCar && <FormForUpdate car={car} />}
-
+            {carForUpdate && (updatedCar.id === carForUpdate.id && <FormForUpdate car={car}/>)}
 
         </div>
     );
