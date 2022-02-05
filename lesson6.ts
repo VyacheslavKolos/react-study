@@ -41,35 +41,37 @@ interface IMission {
     launch_site: {
         site_name_long: string;
     },
-    links: {
-        article_link: null;
-        video_link: string;
-    },
-    rocket: {
-        rocket_name: string;
-        first_stage: {
-            cores: [
-                {
-                    flight: string;
-                    core: {
-                        reuse_count: string;
-                        status: string;
-                    }
-                }
-            ]
-        },
-        second_stage: {
-            payloads: [
-                {
-                    payload_type: string;
-                    payload_mass_kg: number;
-                    payload_mass_lbs: number;
-                }
-            ]
-        }
-    }
+    links:ILinks;
+    rocket: IRocket
 }
 
+interface ILinks {
+    article_link: null;
+    video_link: string;
+}
+interface IRocket{
+    rocket_name: string;
+    first_stage: {
+        cores: [
+            {
+                flight: string;
+                core: {
+                    reuse_count: string;
+                    status: string;
+                }
+            }
+        ]
+    },
+    second_stage: {
+        payloads: [
+            {
+                payload_type: string;
+                payload_mass_kg: number;
+                payload_mass_lbs: number;
+            }
+        ]
+    }
+}
 
 //--------------------------------------------------------------------
 
