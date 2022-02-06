@@ -17,7 +17,7 @@ const Car = ({car}) => {
         dispatch(carToUpdate({car}))
     }
 
-    const {carForUpdate} = useSelector(store => store.cars)
+    const {carForUpdate} = useSelector(store => store['cars'])
 
     return (
         <div className={"car"}>

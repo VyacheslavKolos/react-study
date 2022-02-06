@@ -14,6 +14,18 @@ export const getAllCars = createAsyncThunk(
     }
 )
 
+export const createCar = createAsyncThunk(
+    'cars/createCar',
+    async ({data: newCar, id}, {dispatch, rejectWithValue}) => {
+        try {
+            const data = await carService.create(newCar);
+            dispatch(addCar({data}))
+        } catch (e) {
+            return rejectWithValue(e.message)
+        }
+    }
+)
+
 export const updateCarById = createAsyncThunk(
     'cars/updateCarById',
     async ({id, car}, {dispatch}) => {
@@ -22,18 +34,7 @@ export const updateCarById = createAsyncThunk(
     }
 )
 
-export const createCar = createAsyncThunk(
-    'cars/createCar',
-    async ({data: newCar, id}, {dispatch}) => {
-        try {
-            const data = await carService.create(newCar);
-            console.log(data);
-            dispatch(addCar({data}))
-        } catch (e) {
-            console.log(e);
-        }
-    }
-)
+
 
 export const deleteCarThunk = createAsyncThunk(
     'cars/deleteCarById',
@@ -80,7 +81,12 @@ const carSlice = createSlice({
         },
         [getAllCars.rejected]: (state, action) => {
             state.status = 'rejected'
-            state.error = action.payload
+            state.errors = action.payload
+            console.log(action.payload);
+        },
+        [createCar.rejected]: (state, action) => {
+            state.status = 'rejected'
+            state.errors = action.payload
         }
     }
 })
