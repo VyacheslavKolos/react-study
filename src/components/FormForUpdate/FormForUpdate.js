@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 
 import './FormForUpdate.css'
 import {useDispatch, useSelector} from "react-redux";
-import {carToUpdate, updateCarById} from "../../store";
+import {updateCarById} from "../../store";
 
 const FormForUpdate = () => {
 
@@ -28,7 +28,7 @@ const FormForUpdate = () => {
                     <input type="text" placeholder={'model'} {...register('model')}/>
                     <input type="number" placeholder={'price'} {...register('price')}/>
                     <input type="number" placeholder={'year'} {...register('year')}/>
-                    <button >Update Car</button>
+                    <button>Update Car</button>
                 </div>
             </form>
         </div>

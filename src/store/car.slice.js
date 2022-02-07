@@ -35,7 +35,6 @@ export const updateCarById = createAsyncThunk(
 )
 
 
-
 export const deleteCarThunk = createAsyncThunk(
     'cars/deleteCarById',
     async ({id}, {dispatch}) => {

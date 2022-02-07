@@ -1,0 +1,9 @@
+.carsAndForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cars{
+    margin-top: 10px;
+}
