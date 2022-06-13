@@ -6,12 +6,12 @@ function App() {
 
     const store = useSelector(store => store);
     console.log(store);
-    const dispatch=useDispatch();
+    const dispatch = useDispatch();
 
     return (
         <div className="App">
             <h3>Redux-saga</h3>
-            <button onClick={()=>dispatch({type:'LOAD_DATA'})}>CLICKKKKK</button>
+
         </div>
     );
 }
