@@ -6,10 +6,18 @@ import {Provider} from 'react-redux';
 import store from './redux';
 
 
+import {ConnectedRouter} from 'connected-react-router';
+import {history} from './redux/reducers';
+import {BrowserRouter} from 'react-router-dom';
+
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
-            <App/>
+            <ConnectedRouter history={history}>
+                <BrowserRouter>
+                    <App/>
+                </BrowserRouter>
+            </ConnectedRouter>
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
